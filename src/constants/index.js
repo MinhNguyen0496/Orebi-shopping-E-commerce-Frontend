@@ -13,7 +13,6 @@ import {
   newArrFour,
 } from "../assets/images/index";
 
-// =================== NavBarList Start here ====================
 export const navBarList = [
   {
     _id: 1001,
@@ -41,8 +40,7 @@ export const navBarList = [
     link: "/journal",
   },
 ];
-// =================== NavBarList End here ======================
-// =================== Special Offer data Start here ============
+
 export const SplOfferData = [
   {
     _id: "201",
@@ -81,9 +79,7 @@ export const SplOfferData = [
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 ];
-// =================== Special Offer data End here ==============
 
-// =================== PaginationItems Start here ===============
 
 export const paginationItems = [
   {
@@ -502,4 +498,3 @@ export const paginationItems = [
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 ];
-// =================== PaginationItems End here =================

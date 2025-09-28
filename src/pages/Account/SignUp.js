@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { logoLight } from "../../assets/images";
 
 const SignUp = () => {
-  // ============= Initial State Start here =============
   const [clientName, setClientName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -14,8 +13,7 @@ const SignUp = () => {
   const [country, setCountry] = useState("");
   const [zip, setZip] = useState("");
   const [checked, setChecked] = useState(false);
-  // ============= Initial State End here ===============
-  // ============= Error Msg Start here =================
+
   const [errClientName, setErrClientName] = useState("");
   const [errEmail, setErrEmail] = useState("");
   const [errPhone, setErrPhone] = useState("");
@@ -24,9 +22,7 @@ const SignUp = () => {
   const [errCity, setErrCity] = useState("");
   const [errCountry, setErrCountry] = useState("");
   const [errZip, setErrZip] = useState("");
-  // ============= Error Msg End here ===================
   const [successMsg, setSuccessMsg] = useState("");
-  // ============= Event Handler Start here =============
   const handleName = (e) => {
     setClientName(e.target.value);
     setErrClientName("");
@@ -59,14 +55,12 @@ const SignUp = () => {
     setZip(e.target.value);
     setErrZip("");
   };
-  // ============= Event Handler End here ===============
-  // ================= Email Validation start here =============
+
   const EmailValidation = (email) => {
     return String(email)
       .toLowerCase()
       .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
   };
-  // ================= Email Validation End here ===============
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -103,7 +97,6 @@ const SignUp = () => {
       if (!zip) {
         setErrZip("Enter the zip code of your area");
       }
-      // ============== Getting the value ==============
       if (
         clientName &&
         email &&
@@ -219,7 +212,6 @@ const SignUp = () => {
                 Create your account
               </h1>
               <div className="flex flex-col gap-3">
-                {/* client name */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Full Name
@@ -238,7 +230,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Email */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Work Email
@@ -257,7 +248,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Phone Number */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Phone Number
@@ -276,7 +266,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Password */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Password
@@ -295,7 +284,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Address */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Address
@@ -314,7 +302,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* City */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     City
@@ -333,7 +320,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Country */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Country
@@ -352,7 +338,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Zip code */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Zip/Postal code
@@ -371,7 +356,6 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Checkbox */}
                 <div className="flex items-start mdl:items-center gap-2">
                   <input
                     onChange={() => setChecked(!checked)}

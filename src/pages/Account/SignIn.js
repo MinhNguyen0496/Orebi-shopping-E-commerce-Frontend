@@ -4,17 +4,13 @@ import { Link } from "react-router-dom";
 import { logoLight } from "../../assets/images";
 
 const SignIn = () => {
-  // ============= Initial State Start here =============
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // ============= Initial State End here ===============
-  // ============= Error Msg Start here =================
+
   const [errEmail, setErrEmail] = useState("");
   const [errPassword, setErrPassword] = useState("");
 
-  // ============= Error Msg End here ===================
   const [successMsg, setSuccessMsg] = useState("");
-  // ============= Event Handler Start here =============
   const handleEmail = (e) => {
     setEmail(e.target.value);
     setErrEmail("");
@@ -23,7 +19,6 @@ const SignIn = () => {
     setPassword(e.target.value);
     setErrPassword("");
   };
-  // ============= Event Handler End here ===============
   const handleSignUp = (e) => {
     e.preventDefault();
 
@@ -34,7 +29,6 @@ const SignIn = () => {
     if (!password) {
       setErrPassword("Create a password");
     }
-    // ============== Getting the value ==============
     if (email && password) {
       setSuccessMsg(
         `Hello dear, Thank you for your attempt. We are processing to validate your access. Till then stay connected and additional assistance will be sent to you by your mail at ${email}`
@@ -135,7 +129,6 @@ const SignIn = () => {
                 Sign in
               </h1>
               <div className="flex flex-col gap-3">
-                {/* Email */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Work Email
@@ -155,7 +148,6 @@ const SignIn = () => {
                   )}
                 </div>
 
-                {/* Password */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Password
